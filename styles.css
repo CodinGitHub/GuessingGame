@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body{
   font-family: 'Press Start 2P', cursive;
+  line
 }
 h1{
   border: 3px solid;
@@ -9,4 +10,31 @@ h1{
   text-align: center;
   margin: 25vh auto;
   box-shadow: 5px 5px black;
+}
+.main_container{
+  width: 600px;
+  height: 300px;
+  border: 2px solid;
+  margin: 10px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px;
+}
+#input{
+  border: transparent;
+  text-align: center;
+  font-size: 2em;
+  width: 60px;
+  font-family: 'Press Start 2P', cursive;
+  padding: 8px;
+  background-color: tomato;
+}
+.boton{
+  font-family: 'Press Start 2P', cursive;
+}
+.inputs{
+  text-align: center;
+}
+.task{
+  text-align: center;
 }
