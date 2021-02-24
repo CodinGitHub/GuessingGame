@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body{
   font-family: 'Press Start 2P', cursive;
-  line
+  
 }
 h1{
   border: 3px solid;
@@ -12,13 +12,14 @@ h1{
   box-shadow: 5px 5px black;
 }
 .main_container{
-  width: 600px;
-  height: 300px;
-  border: 2px solid;
+  max-width: 610px;
+  height: 495px;
   margin: 10px auto;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 5px 5px;
+  text-align: center;
+  background: url(resources/Menu.png);
+  background-size: 100%;
 }
 #input{
   border: transparent;
@@ -37,4 +38,5 @@ h1{
 }
 .task{
   text-align: center;
+  margin-top: 40px;
 }

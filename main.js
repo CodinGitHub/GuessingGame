@@ -1,5 +1,5 @@
 //Game Variables
-let mysteryNumber = 5;
+let mysteryNumber = Math.floor(Math.random()*10);
 let playerGuess = 0;
 let guessesRemaining = 5;
 let guessesMade = 0;
@@ -41,13 +41,13 @@ function playGame(){
 
   guessesRemaining--;
   guessesMade++;
-  gameState = "Intentos: " + guessesMade + ", Faltantes: " + guessesRemaining;
+  gameState = "Intentos restantes: " + guessesRemaining;
 
   if (playerGuess < mysteryNumber){
     if(playerGuess == (mysteryNumber -1 )){
-      output.innerHTML = "¿" + playerGuess + "? " + "Casi, estás muy cerca ;) intenta de nuevo...<br><br>" + gameState;
+      output.innerHTML = "¿" + playerGuess + "? " + "Casi, estás muy cerca ;) <br>intenta de nuevo...<br><br>" + gameState;
     }else{
-      output.innerHTML = "¿" + playerGuess + "? " + "Muy BAJO :( intenta de nuevo...<br><br>" + gameState;
+      output.innerHTML = "¿" + playerGuess + "? " + "Muy BAJO :( <br>intenta de nuevo...<br><br>" + gameState;
     }
     // Check for the end of the game
     if(guessesRemaining < 1){
@@ -56,9 +56,9 @@ function playGame(){
   }
   else if(playerGuess > mysteryNumber){
     if(playerGuess == (mysteryNumber + 1)){
-      output.innerHTML = "¿" + playerGuess + "? " + "Casi, estás muy cerca ;) intenta de nuevo...<br><br>" + gameState;
+      output.innerHTML = "¿" + playerGuess + "? " + "Casi, estás muy cerca ;) <br>intenta de nuevo...<br><br>" + gameState;
     }else{
-      output.innerHTML = "¿" + playerGuess + "? " + "Muy ALTO :( intenta de nuevo...<br><br>" + gameState;
+      output.innerHTML = "¿" + playerGuess + "? " + "Muy ALTO :( <br> intenta de nuevo...<br><br>" + gameState;
     }
     // Check for the end of the game
     if(guessesRemaining < 1){
