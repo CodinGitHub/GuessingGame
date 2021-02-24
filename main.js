@@ -45,9 +45,11 @@ function playGame(){
 
   if (playerGuess < mysteryNumber){
     if(playerGuess == (mysteryNumber -1 )){
-      output.innerHTML = "¿" + playerGuess + "? " + "Casi, estás muy cerca ;) <br>intenta de nuevo...<br><br>" + gameState;
+      output1.innerHTML = "¿" + playerGuess + "? " + "Casi, estás muy cerca ;)";
+      output2.innerHTML = gameState;
     }else{
-      output.innerHTML = "¿" + playerGuess + "? " + "Muy BAJO :( <br>intenta de nuevo...<br><br>" + gameState;
+      output1.innerHTML = "¿" + playerGuess + "? " + "Muy BAJO :(";
+      output2.innerHTML = gameState;
     }
     // Check for the end of the game
     if(guessesRemaining < 1){
@@ -56,9 +58,11 @@ function playGame(){
   }
   else if(playerGuess > mysteryNumber){
     if(playerGuess == (mysteryNumber + 1)){
-      output.innerHTML = "¿" + playerGuess + "? " + "Casi, estás muy cerca ;) <br>intenta de nuevo...<br><br>" + gameState;
+      output1.innerHTML = "¿" + playerGuess + "? " + "Casi, estás muy cerca ;)";
+      output2.innerHTML = gameState;
     }else{
-      output.innerHTML = "¿" + playerGuess + "? " + "Muy ALTO :( <br> intenta de nuevo...<br><br>" + gameState;
+      output1.innerHTML = "¿" + playerGuess + "? " + "Muy ALTO :(";
+      output2.innerHTML = gameState;
     }
     // Check for the end of the game
     if(guessesRemaining < 1){
@@ -74,9 +78,11 @@ function playGame(){
 
 function endGame(){
   if(gameWon){
-    output.innerHTML = "Genial acertaste... es " + mysteryNumber + "!<br><br>" + "Sólo te tomó " + guessesMade + " intentos.";
+    output1.innerHTML = "Genial acertaste! es " + mysteryNumber;
+    output2.innerHTML = "Sólo te tomó " + guessesMade + " intentos.";
   }else{
-    output.innerHTML = "Lo siento :( se acabaron los intentos.<br><br>" + "El número es: " + mysteryNumber + "." ;
+    output1.innerHTML = "Lo siento :( se acabaron los intentos.";
+    output2.innerHTML = "El número es: " + mysteryNumber + ".";
   }
   // Disable de button
   button.removeEventListener("Click", clickHandler, false);
