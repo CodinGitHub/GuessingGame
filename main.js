@@ -16,6 +16,13 @@ button.style.cursor = "pointer";
 button.addEventListener("click", clickHandler, false);
 window.addEventListener("keydown", keyDownHandler, false);
 
+// The arrow
+let arrow = document.querySelector('#arrow');
+
+function render(){
+  arrow.style.left = (playerGuess * 30+8) + "px";
+}
+
 // Functions
 
 function keyDownHandler(event){
@@ -41,14 +48,14 @@ function playGame(){
 
   guessesRemaining--;
   guessesMade++;
-  gameState = "Intentos restantes: " + guessesRemaining;
+  gameState = "Intentos restantes:<br>" + guessesRemaining;
 
   if (playerGuess < mysteryNumber){
     if(playerGuess == (mysteryNumber -1 )){
       output1.innerHTML = "¿" + playerGuess + "? " + "Casi, estás muy cerca ;)";
       output2.innerHTML = gameState;
     }else{
-      output1.innerHTML = "¿" + playerGuess + "? " + "Muy BAJO :(";
+      output1.innerHTML = "¿" + playerGuess + "?<br>" + "Muy BAJO<br>:(";
       output2.innerHTML = gameState;
     }
     // Check for the end of the game
@@ -61,7 +68,7 @@ function playGame(){
       output1.innerHTML = "¿" + playerGuess + "? " + "Casi, estás muy cerca ;)";
       output2.innerHTML = gameState;
     }else{
-      output1.innerHTML = "¿" + playerGuess + "? " + "Muy ALTO :(";
+      output1.innerHTML = "¿" + playerGuess + "?<br>" + "Muy ALTO<br>:(";
       output2.innerHTML = gameState;
     }
     // Check for the end of the game
@@ -74,15 +81,17 @@ function playGame(){
     gameWon = true;
     endGame();
   }
+
+  render();
 }
 
 function endGame(){
   if(gameWon){
-    output1.innerHTML = "Genial acertaste! es " + mysteryNumber;
-    output2.innerHTML = "Sólo te tomó " + guessesMade + " intentos.";
+    output1.innerHTML = "Genial acertaste!<br>es " + mysteryNumber;
+    output2.innerHTML = "Sólo te<br>tomó " + guessesMade + " intentos.";
   }else{
-    output1.innerHTML = "Lo siento :( se acabaron los intentos.";
-    output2.innerHTML = "El número es: " + mysteryNumber + ".";
+    output1.innerHTML = ":(<br>no hay más intentos.";
+    output2.innerHTML = "El<br>número es:<br>" + mysteryNumber + ".";
   }
   // Disable de button
   button.removeEventListener("Click", clickHandler, false);

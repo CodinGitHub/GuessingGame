@@ -2,28 +2,24 @@
 body{
   font-family: 'Press Start 2P', cursive;
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  background-color: chocolate;
 }
 h1{
   display: inline-block;
-  color: #e64c3c;
+  color: chocolate;
   font-family: 'Fredoka One', cursive;
   vertical-align:top;
-  /*
-  border: 3px solid;
-  width: 320px;
-  padding: 10px;
-  text-align: center;
-  margin: 25vh auto;
-  box-shadow: 5px 5px black;
-  */
 }
 .main_container{
-  margin: 0 auto;
+  margin: 30px auto;
   max-width: 700px;
+  background-color: darkgray;
+  padding: 5px;
+  border-radius: 8px;
 }
 .box_container{
-  width: 350px;
+  width: 320px;
   height: 275px;
   margin: 10px auto;
   box-sizing: border-box;
@@ -31,21 +27,19 @@ h1{
   background: url(resources/Menu.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  /* border: 2px solid black; */
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .section_main{
-  /* border: 2px solid red; */
   grid-column: 1/3;
 }
 .section_one{
-  /* border: 2px solid green; */
   font-size: 0.8em;
+  padding: 0 0 5px 20px;
 }
 .section_two{
-  /* border: 2px solid blue; */
   font-size: 0.8em;
+  padding: 0 20px 5px 0;
 }
 #input{
   border: transparent;
@@ -54,7 +48,7 @@ h1{
   width: 60px;
   font-family: 'Press Start 2P', cursive;
   padding: 8px;
-  background-color: #e64c3c;
+  background-color: chocolate;
 }
 .boton{
   font-family: 'Press Start 2P', cursive;
@@ -65,9 +59,12 @@ h1{
 .task{
   text-align: center;
   margin: 25px 20px 0;
+  font-size: 0.8em;
 }
 header{
-  margin: 30px;
+  margin: 15px 5px 30px 5px ;
+  font-size: 15px;
+  text-align: center;
 }
 .attribution { 
   margin-top: 50px;
@@ -76,5 +73,28 @@ header{
 }
 .attribution a { 
   text-decoration: none; 
-  color: #e64c3c; 
+  color: chocolate; 
+}
+#stage{
+  margin: 0 auto;
+  width: 300px;
+  height: 35px;
+  position: relative;
+}
+#scale{
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+#arrow{
+  width: 17px;
+  height: 22px;
+  position: absolute;
+  top: -7px;
+  left: 0px;
+  background-image: url(/resources/down-arrow.png);
+  background-size: 15px;
+  background-repeat: no-repeat;
 }
