@@ -97,4 +97,5 @@ header{
   background-image: url(/resources/down-arrow.png);
   background-size: 15px;
   background-repeat: no-repeat;
+  transition: left 0.5s ease-out 0s;
 }
